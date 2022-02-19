@@ -122,3 +122,15 @@ For the example above (the one in _word_rnd_ topic), the sample output is:
 ## Technical Details
 This repo contains a REST API which has one endpoint. 
 The API written in FastAPI library and the dataset places in MongoDB Atlas.
+
+For executing the repo, just clone or download it and run the following command to serve it:
+
+```
+uvicorn main:app --reload
+```
+
+Before that, you should install the required libraries using following command:
+
+```
+pip install -r requirements.txt
+```
