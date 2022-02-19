@@ -1,4 +1,4 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 from typing import Optional, List
 
 
@@ -8,9 +8,9 @@ class WordRequest(BaseModel):
 
 
 class Meaning(BaseModel):
-    anlam: str
+    meaning: str = Field(alias='anlam')
 
 
 class WordDict(BaseModel):
-    madde: str
-    anlamlarListe: Optional[List[Meaning]] = None
+    word: str = Field(alias='madde')
+    meanings: Optional[List[Meaning]] = Field(default=None, alias='anlamlarListe')
